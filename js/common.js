@@ -34,6 +34,8 @@ $(document).ready(function(){
       ]
     });
 
+    var flag = 0;
+
     var windowHeight = $(window).height(); 
     
     function getAnim(elem, callback){                                // PRELOADER
@@ -127,5 +129,24 @@ $(document).ready(function(){
             getFoto($('.second'), 420);              
             getFoto($('.third'), 440);              
         } 
+
+        var skillSvg = $('.skills').offset().top  - windowHeight / 2;
+            //console.log(percent);
+        if ($(document).scrollTop() >= skillSvg && flag == 0) {
+            $('.skill').each(function(){
+                var count = 0;
+                var self    = $(this);
+                var percent = parseInt(self.data('percent'));
+                //self.children().eq(2).animate({height: percent + '%'}, 2000, "linear");
+                var persentChange = setInterval(function(){                    
+                    if(count <= percent){
+                        self.children().eq(0).text(count + '%');
+                        self.children().eq(2).css("height", count + "%");
+                    }
+                    count++;
+                }, 10);
+            });
+            flag = 1; 
+        }
     });
 });
