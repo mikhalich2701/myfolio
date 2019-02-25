@@ -1,0 +1,36 @@
+.aboutMe
+	width: 100%
+	padding-top: 50px
+	padding-bottom: 50px
+	background: #00008B
+	&__info
+		position: relative
+		margin-bottom: 20px
+		color: $maingray	
+		font-size: 18px
+		.tag
+			color: #e9b171
+	&__text
+		margin: 10px 0
+		padding-left: 60px
+		color: #e9b171
+		font-size: 1.5rem
+		line-height: 1.8rem
+		&:nth-child(3)
+			color: #fff
+			font-style: italic
+	.myfoto
+		display: flex
+		align-items: center
+		width: 100%
+		height: 100%
+		&__img
+			margin: 0 auto
+			width: 90%
+			clip-path: url(#clipping)
+	.gexagon
+		&-item
+			transform: rotateX(90deg)
+			-moz-transform: rotateX(90deg)
+			transition: all .5s
+	

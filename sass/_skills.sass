@@ -1,0 +1,50 @@
+.skills
+	position: relative
+	padding-top: 150px
+	padding-bottom: 150px
+	background: url('../img/quality-bg1.jpg') 50% 0 no-repeat
+	background-size: cover
+	background-attachment: fixed
+	&:before
+		position: absolute
+		content: ""
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		background: radial-gradient(rgba(#000, .8) 0%,rgba(#000, .8) 100%), url('../img/pattern.png')
+	&__angleUp
+		position: absolute
+		width: 100%
+		left: 0
+		top: 0
+		z-index: 100
+	&__angleDown
+		position: absolute
+		width: 100%
+		left: 0
+		bottom: 0
+		z-index: 100
+	.title
+		width: 320px
+		height: 160px
+	&__name
+		margin-bottom: 20px
+		color: #DC143C	
+	&__text
+		margin-bottom: 40px
+		font-size: 1.3rem
+		color: #fff
+		&-block
+			padding-left: 30px
+		&-item
+			position: relative
+			margin-bottom: 10px
+			&:after
+				+pseudo
+				width: 10px
+				height: 10px
+				left: -30px
+				top: 5px
+				background: #DC143C
+				transform: rotate(45deg)

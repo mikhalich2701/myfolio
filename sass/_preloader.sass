@@ -1,0 +1,43 @@
+.preloader
+	position: absolute
+	left: 0
+	top: 0
+	width: 100vw
+	height: 100vh
+	background: #00E676
+	z-index: 500
+	&__bg
+		position: absolute
+		left: 0
+		top: 0
+		width: 200%
+		height: 100%
+		background: linear-gradient(to right,#861a54,#054f7d,#00a7cf,#efe348,#861a54)
+		background-size: 600% 100%
+		background-position: 0 0
+		animation: bgpreloader 2s linear infinite	
+.logo
+	position: absolute
+	left: 50%
+	top: 50%
+	transform: translate(-50%, -50%)
+	width: 40%
+	transition: all 1s linear
+	&__svg
+		&-am
+			fill: #E9001B
+			stroke-width: 1px
+			stroke: #E9001B
+			stroke-dasharray: 1000
+			animation: am 2s ease
+		&-text
+			fill: #0100AA
+			stroke-width: 1px
+			stroke: #0100AA
+			stroke-dasharray: 700
+			animation: text 4s ease
+.translate
+	left: 40px
+	top: 45px
+	transform: translate(0, 0)
+	width: 300px

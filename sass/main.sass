@@ -1,0 +1,163 @@
+/*===============================Переменные============================*/
+
+@import "vars"
+@import "mixins"
+
+/*============================Стартовые настройки======================*/
+
+*
+	box-sizing: border-box
+	&:before, &:after
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+body
+	height: 100%	
+	font-size: 100%
+	font-family: $mainfont
+	background: #ccc
+	overflow-x: hidden
+html
+	font-size: $p
+	+r(1600)
+		font-size: 15px
+	+r(1400)
+		font-size: 14px
+	+r(1200)
+		font-size: 13px
+	+r(992)
+		font-size: 12px
+	+r(768)
+		font-size: 11px
+	+r(579)
+		font-size: 10px
+	+r(480)
+		font-size: 9px
+	
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6
+	font-family: $titlefont
+	color: #fff
+	letter-spacing: 0.14rem
+h1, .h1
+	font-family: 'league_gothicregular'
+	padding-bottom: 50px
+	font-size: $h1
+	font-weight: bold
+	letter-spacing: 0.3rem
+	line-height: 5.6rem
+	text-transform: uppercase
+h2, .h2
+	font-family: 'league_gothicregular'
+	padding: 50px 0
+	color: $accent
+	font-size: 60px
+	font-weight: bold
+	letter-spacing: 5px
+	text-transform: uppercase
+	text-align: center
+	+r(768)
+		font-size: 28px
+h3, .h3
+	font-size: $h3
+	+r(768)
+		font-size: 20px
+h4, .h4
+	font-family: $skillfont
+	font-size: 24px
+	text-align: center
+h5, .h5
+	font-size: 20px
+h6, .h6
+	font-size: 18px
+
+.img
+	display: block
+	width: 100%
+	height: auto
+
+a
+  text-decoration: none
+  &:hover
+  	text-decoration: none
+
+.tag
+	margin: 20px 0
+	font-family: 'inconsolata', monospace
+	font-size: 1.87rem
+	color: #DC143C
+
+.title
+	position: relative
+	margin: 50px auto
+	width: 200px
+	height: 160px	
+	.circle
+		stroke-dasharray: 565px
+		stroke-dashoffset: 0px
+		&__text
+			font-family: 'league_gothicregular'
+			font-size: 90px
+			font-weight: bold
+			letter-spacing: 5px
+
+/*====================================САЙТ====================================*/
+
+/*==============================ADD CLASS==============================*/
+	
+.transform
+	transform-origin: center center
+	transform: rotate(90deg)
+	span:last-child
+		transform: rotate(-60deg) translate(19px, 2px)
+	span:nth-child(2)
+		transform: rotate(60deg) translate(-2px, 8px)
+
+/*==============================PRELOADER==============================*/
+	
+@import "preloader"	
+
+/*===============================NAVIGATE===============================*/
+
+@import "navigate"
+
+/*================================HEADER================================*/
+
+@import "header"
+
+/*================================ABOUT ME===============================*/
+
+@import "aboutme"
+
+/*================================SKILLS===============================*/
+
+@import "skills"
+
+/*==============================PAGEPROOFS=============================*/
+
+@import "pageproofs"
+
+/*================================ANIMATION==============================*/
+
+@import "animation"

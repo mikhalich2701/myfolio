@@ -1,0 +1,38 @@
+.navigate
+	position: fixed
+	display: flex
+	justify-content: center
+	padding-top: 120px
+	left: 100%
+	top: 0
+	width: 100vw
+	height: 100vh
+	background: #000	
+	transition: left .6s ease
+	z-index: 400
+	&__box
+		width: 50%
+		+r(480)
+			width: 80%
+	&__item
+		margin: 10px 0
+		&-link
+			display: inline-block
+			padding-left: 300px 
+			font-size: 50px
+			font-weight: bold
+			color: #fff
+			background: #fff
+			background-clip: text
+			-webkit-text-fill-color: transparent
+			text-transform: uppercase
+			text-decoration: none
+			opacity: 0 			
+			transition: all .6s ease
+			+r(480)
+				font-size: 36px
+			&:hover
+				background: linear-gradient(to right,#861a54,#054f7d,#00a7cf)
+				background-clip: text
+				-webkit-text-fill-color: transparent
+				transform: translateX(50px)		

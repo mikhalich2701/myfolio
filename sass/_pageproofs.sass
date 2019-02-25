@@ -1,0 +1,81 @@
+.pageProofs
+	position: relative
+	padding: 50px
+	background: #fff
+	color: #3C4761
+	&__content
+		position: relative
+		width: 100%
+		margin-bottom: 40px
+		padding: 10px
+		text-align: center
+		font-weight: bold
+		&-way
+			position: absolute
+			width: 5px
+			height: 82px
+			top: 36%
+			right: -11%
+			background: $accent
+			&:before
+				position: absolute
+				content: ""
+				width: 65px
+				height: 5px
+				top: 0
+				right: 0
+				background: $accent
+			&:after
+				position: absolute
+				content: ""
+				width: 65px
+				height: 5px
+				left: 0
+				bottom: 0
+				background: $accent
+			&-way2, &-way4
+				transform: rotateX(180deg)
+		&-img
+			position: relative
+			width: 140px
+			height: 140px
+			margin: 0 auto
+			background: lighten($accent, 50%)
+			border-radius: 10px
+			border: 2px solid $accent
+			box-shadow: inset 0 0 40px 10px lighten($accent, 10%)
+			font-size: 60px
+			color: $accent
+			font-weight: bold
+			line-height: 130px
+			z-index: 10		
+		&-name
+			margin: 10px 0
+			font-size: 20px
+			font-family: $titlefont
+	&__resurseTitle
+		padding-bottom: 50px
+		text-align: center
+		color: $accent	
+	&__resurse
+		position: relative
+		width: 92%
+		&-button
+			position: absolute
+			top: 38%
+			font-size: 36px
+			color: $accent
+			cursor: pointer
+			z-index: 100
+			&-prev
+				left: -4%			
+			&-next
+				right: -4%		
+		&-row
+			overflow: hidden
+			&-elem
+				margin: 10px
+				background: #fff
+				& img
+					width: 100%
+					height: auto
