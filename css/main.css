@@ -809,57 +809,35 @@ a:hover {
 
 .pageProofs {
   position: relative;
+  margin-bottom: 300px;
   padding: 50px;
   background: #DC143C;
-  color: #3C4761;
+  color: #6EC1D2;
 }
 
 .pageProofs .title {
   width: 440px;
 }
 
+.pageProofs .tag {
+  color: #7BC13D;
+}
+
 .pageProofs__content {
   position: relative;
   width: 100%;
-  margin-bottom: 40px;
   padding: 10px;
   text-align: center;
   font-weight: bold;
-}
-
-.pageProofs__content-way {
-  position: absolute;
-  width: 5px;
-  height: 82px;
-  top: 36%;
-  right: -11%;
-  background: #2c3e50;
-}
-
-.pageProofs__content-way:before {
-  position: absolute;
-  content: "";
-  width: 65px;
-  height: 5px;
-  top: 0;
-  right: 0;
-  background: #2c3e50;
-}
-
-.pageProofs__content-way:after {
-  position: absolute;
-  content: "";
-  width: 65px;
-  height: 5px;
-  left: 0;
-  bottom: 0;
-  background: #2c3e50;
-}
-
-.pageProofs__content-way-way2,
-.pageProofs__content-way-way4 {
-  -webkit-transform: rotateX(180deg);
-  transform: rotateX(180deg);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: rotateY(-90deg);
+  transform: rotateY(-90deg);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  -o-transition: transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
 }
 
 .pageProofs__content-img {
@@ -867,6 +845,7 @@ a:hover {
   width: 140px;
   height: 140px;
   margin: 0 auto;
+  margin-bottom: 10px;
   background: #aabed1;
   -webkit-border-radius: 10px;
   border-radius: 10px;
@@ -881,51 +860,9 @@ a:hover {
 }
 
 .pageProofs__content-name {
-  margin: 10px 0;
-  font-size: 20px;
+  margin-bottom: 10px;
+  font-size: 16px;
   font-family: "Lato-Heavy", sans-serif;
-}
-
-.pageProofs__resurseTitle {
-  padding-bottom: 50px;
-  text-align: center;
-  color: #2c3e50;
-}
-
-.pageProofs__resurse {
-  position: relative;
-  width: 92%;
-}
-
-.pageProofs__resurse-button {
-  position: absolute;
-  top: 38%;
-  font-size: 36px;
-  color: #2c3e50;
-  cursor: pointer;
-  z-index: 100;
-}
-
-.pageProofs__resurse-button-prev {
-  left: -4%;
-}
-
-.pageProofs__resurse-button-next {
-  right: -4%;
-}
-
-.pageProofs__resurse-row {
-  overflow: hidden;
-}
-
-.pageProofs__resurse-row-elem {
-  margin: 10px;
-  background: #fff;
-}
-
-.pageProofs__resurse-row-elem img {
-  width: 100%;
-  height: auto;
 }
 
 /*================================ANIMATION==============================*/

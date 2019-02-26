@@ -148,5 +148,12 @@ $(document).ready(function(){
             });
             flag = 1; 
         }
+
+        if ($(document).scrollTop() >= $('.pageProofs').offset().top){
+            $('.pageProofs__content').each(function(i){
+                $(this).css("transition-delay", i * 0.3 + "s");
+            });
+            $('.pageProofs__content').css("transform", "rotateY(0deg)");
+        }
     });
 });
