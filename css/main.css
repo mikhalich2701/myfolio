@@ -585,8 +585,8 @@ a:hover {
 .skill {
   position: relative;
   margin: 0 auto;
-  width: 15vw;
-  height: 15vw;
+  width: 12vw;
+  height: 12vw;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -635,7 +635,6 @@ a:hover {
   border: 5px solid #e44d26;
   -webkit-box-shadow: 0 0 15px 3px #e44d26;
   box-shadow: 0 0 15px 3px #e44d26;
-  background: rgba(228, 77, 38, 0.5);
 }
 
 .html .skill__percent {
@@ -650,7 +649,6 @@ a:hover {
   border: 5px solid #0170ba;
   -webkit-box-shadow: 0 0 15px 3px #0170ba;
   box-shadow: 0 0 15px 3px #0170ba;
-  background: rgba(1, 112, 186, 0.5);
 }
 
 .css .skill__percent {
@@ -665,7 +663,6 @@ a:hover {
   border: 5px solid #EFC725;
   -webkit-box-shadow: 0 0 15px 3px #EFC725;
   box-shadow: 0 0 15px 3px #EFC725;
-  background: rgba(239, 199, 37, 0.5);
 }
 
 .javascript .skill__percent {
@@ -680,7 +677,6 @@ a:hover {
   border: 5px solid #131b28;
   -webkit-box-shadow: 0 0 15px 3px #131b28;
   box-shadow: 0 0 15px 3px #131b28;
-  background: rgba(19, 27, 40, 0.5);
 }
 
 .jquery .skill__percent {
@@ -695,7 +691,6 @@ a:hover {
   border: 5px solid #DA4648;
   -webkit-box-shadow: 0 0 15px 3px #DA4648;
   box-shadow: 0 0 15px 3px #DA4648;
-  background: rgba(218, 70, 72, 0.5);
 }
 
 .gulp .skill__percent {
@@ -710,7 +705,6 @@ a:hover {
   border: 5px solid #CD6799;
   -webkit-box-shadow: 0 0 15px 3px #CD6799;
   box-shadow: 0 0 15px 3px #CD6799;
-  background: rgba(205, 103, 153, 0.5);
 }
 
 .sass .skill__percent {
@@ -725,7 +719,6 @@ a:hover {
   border: 5px solid #2E4F82;
   -webkit-box-shadow: 0 0 15px 3px #2E4F82;
   box-shadow: 0 0 15px 3px #2E4F82;
-  background: rgba(46, 79, 130, 0.5);
 }
 
 .less .skill__percent {
@@ -740,7 +733,6 @@ a:hover {
   border: 5px solid #5B4282;
   -webkit-box-shadow: 0 0 15px 3px #5B4282;
   box-shadow: 0 0 15px 3px #5B4282;
-  background: rgba(91, 66, 130, 0.5);
 }
 
 .bootstrap .skill__percent {
@@ -755,7 +747,6 @@ a:hover {
   border: 5px solid #56332b;
   -webkit-box-shadow: 0 0 15px 3px #56332b;
   box-shadow: 0 0 15px 3px #56332b;
-  background: rgba(86, 51, 43, 0.5);
 }
 
 .pug .skill__percent {
@@ -770,7 +761,6 @@ a:hover {
   border: 5px solid #26C6DA;
   -webkit-box-shadow: 0 0 15px 3px #26C6DA;
   box-shadow: 0 0 15px 3px #26C6DA;
-  background: rgba(38, 198, 218, 0.5);
 }
 
 .figma .skill__percent {
@@ -791,7 +781,6 @@ a:hover {
   border: 5px solid #FF7C00;
   -webkit-box-shadow: 0 0 15px 3px #FF7C00;
   box-shadow: 0 0 15px 3px #FF7C00;
-  background: rgba(255, 124, 0, 0.5);
 }
 
 .illustrator .skill__percent {
@@ -806,7 +795,6 @@ a:hover {
   border: 5px solid #00C8FF;
   -webkit-box-shadow: 0 0 15px 3px #00C8FF;
   box-shadow: 0 0 15px 3px #00C8FF;
-  background: rgba(0, 200, 255, 0.5);
 }
 
 .fotoshop .skill__percent {
@@ -822,8 +810,12 @@ a:hover {
 .pageProofs {
   position: relative;
   padding: 50px;
-  background: #fff;
+  background: #DC143C;
   color: #3C4761;
+}
+
+.pageProofs .title {
+  width: 440px;
 }
 
 .pageProofs__content {
@@ -1131,6 +1123,11 @@ a:hover {
 @media only screen and (max-width: 1200px) {
   html {
     font-size: 13px;
+  }
+
+  .skill {
+    width: 15vw;
+    height: 15vw;
   }
 }
 
