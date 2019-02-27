@@ -2,22 +2,26 @@ section.skills
 	.angleUp
 		svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 1920 100', style='enable-background:new 0 0 1920 100;', xml:space='preserve')
 			defs
+				lineargradient#linearGradient1(x1='0', x2='0', y1='1', y2='0')
+					stop(stop-color='#2430DA', offset='0%')
+					stop(stop-color='#2430DA', offset='100%')
+			defs
 				polygon#angleUp(points="0,0 1920,0 0,100")
-			use(xlink:href='#angleUp' x='0.0000' y='0.0000' fill="#00008B")
+			use(xlink:href='#angleUp' x='0.0000' y='0.0000' fill="url(#linearGradient1)")
 	.angleDown
 		svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 1920 100', style='enable-background:new 0 0 1920 100;', xml:space='preserve')
-			use(xlink:href='#angleUp' x='0.0000' y='100.0000' fill="#DC143C" transform="rotate(180, 960, 100)")
+			use(xlink:href='#angleUp' x='0.0000' y='100.0000' fill="#7EC7A9" transform="rotate(180, 960, 100)")
 	.container
 		.row
 			.col
 				.title
 					svg.circle(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 400 200', style='enable-background:new 0 0 400 200;', xml:space='preserve')
 						defs
-							clipPath#rect
+							clipPath#rect1
 								rect(x="0" y="0" width="400" height="65")
 								rect(x="0" y="140" width="400" height="60")
-						circle(r="90" cx="200" cy="100" stroke="#DC143C" stroke-width="20" fill="transparent" style="clip-path: url(#rect);")
-						text.circle__text(x="0" y="135" fill="#fff") МОИ НАВЫКИ
+						circle(r="90" cx="200" cy="100" stroke="#DC143C" stroke-width="20" fill="transparent" style="clip-path: url(#rect1);")
+						text.circle__text(x="0" y="135" fill="url(#linearGradient)") МОИ НАВЫКИ
 	.container-fluid
 		.row.justify-content-center
 			.col-xl-10.col-lg-12

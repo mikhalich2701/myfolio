@@ -1,14 +1,17 @@
 section.works
 	.angleUp
 		svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 1920 100', style='enable-background:new 0 0 1920 100;', xml:space='preserve')
-			use(xlink:href='#angleUp' x='0.0000' y='0.0000' fill="#DC143C")
+			use(xlink:href='#angleUp' x='0.0000' y='0.0000' fill="#4DC611")
 	.angleDown
 		svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 1920 100', style='enable-background:new 0 0 1920 100;', xml:space='preserve')
 			use(xlink:href='#angleUp' x='0.0000' y='100.0000' fill="#fff" transform="rotate(180, 960, 100)")
-	.container
-		h2#work.works__title.wow.slideInUp Портфолио
-		.title__icon.wow.slideInUp
-			i.fa.fa-camera(aria-hidden="true")
+	.container-fluid
+		.row
+			.col
+				.title
+					svg.circle(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 350 200', style='enable-background:new 0 0 350 200;', xml:space='preserve')
+						circle(r="90" cx="175" cy="100" stroke="#9e009e" stroke-width="20" fill="transparent" style="clip-path: url(#rect1);")
+						text.circle__text(x="0" y="135" fill="url(#linearGradient)") ПОРТФОЛИО
 		.row.justify-content-center
 			nav.works__nav
 				ul

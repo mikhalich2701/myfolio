@@ -101,9 +101,15 @@
             <div class="col">
               <div class="title">
                 <svg class="circle" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 250 200" style="enable-background:new 0 0 250 200;" xml:space="preserve">
-                  <circle r="90" cx="125" cy="100" stroke="#e9b171" stroke-width="20" fill="transparent"></circle>
-                  <rect x="0" y="65" width="250" height="75" fill="#00008B"></rect>
-                  <text class="circle__text" x="0" y="135" fill="#fff">ОБО МНЕ </text>
+                  <defs>
+                    <lineargradient id="linearGradient">
+                      <stop stop-color="#ED1A11" offset="0%"></stop>
+                      <stop stop-color="#E9009A" offset="50%"></stop>
+                      <stop stop-color="#CC5532" offset="100%"></stop>
+                    </lineargradient>
+                  </defs>
+                  <circle r="90" cx="125" cy="100" stroke="#e9b171" stroke-width="20" fill="transparent" style="clip-path: url(#rect1);"></circle>
+                  <text class="circle__text" x="0" y="135" fill="url(#linearGradient)">ОБО МНЕ </text>
                 </svg>
               </div>
             </div>
@@ -316,14 +322,20 @@
         <div class="angleUp">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 1920 100" style="enable-background:new 0 0 1920 100;" xml:space="preserve">
             <defs>
+              <lineargradient id="linearGradient1" x1="0" x2="0" y1="1" y2="0">
+                <stop stop-color="#2430DA" offset="0%"></stop>
+                <stop stop-color="#2430DA" offset="100%"></stop>
+              </lineargradient>
+            </defs>
+            <defs>
               <polygon id="angleUp" points="0,0 1920,0 0,100"></polygon>
             </defs>
-            <use xlink:href="#angleUp" x="0.0000" y="0.0000" fill="#00008B"></use>
+            <use xlink:href="#angleUp" x="0.0000" y="0.0000" fill="url(#linearGradient1)"></use>
           </svg>
         </div>
         <div class="angleDown">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 1920 100" style="enable-background:new 0 0 1920 100;" xml:space="preserve">
-            <use xlink:href="#angleUp" x="0.0000" y="100.0000" fill="#DC143C" transform="rotate(180, 960, 100)"></use>
+            <use xlink:href="#angleUp" x="0.0000" y="100.0000" fill="#7EC7A9" transform="rotate(180, 960, 100)"></use>
           </svg>
         </div>
         <div class="container">
@@ -332,13 +344,13 @@
               <div class="title">
                 <svg class="circle" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 400 200" style="enable-background:new 0 0 400 200;" xml:space="preserve">
                   <defs>
-                    <clipPath id="rect">
+                    <clipPath id="rect1">
                       <rect x="0" y="0" width="400" height="65"></rect>
                       <rect x="0" y="140" width="400" height="60"></rect>
                     </clipPath>
                   </defs>
-                  <circle r="90" cx="200" cy="100" stroke="#DC143C" stroke-width="20" fill="transparent" style="clip-path: url(#rect);"></circle>
-                  <text class="circle__text" x="0" y="135" fill="#fff">МОИ НАВЫКИ</text>
+                  <circle r="90" cx="200" cy="100" stroke="#DC143C" stroke-width="20" fill="transparent" style="clip-path: url(#rect1);"></circle>
+                  <text class="circle__text" x="0" y="135" fill="url(#linearGradient)">МОИ НАВЫКИ</text>
                 </svg>
               </div>
             </div>
@@ -722,9 +734,8 @@
             <div class="col">
               <div class="title">
                 <svg class="circle" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 550 200" style="enable-background:new 0 0 550 200;" xml:space="preserve">
-                  <circle r="90" cx="275" cy="100" stroke="#7BC13D" stroke-width="20" fill="transparent"></circle>
-                  <rect x="0" y="65" width="550" height="75" fill="#DC143C"></rect>
-                  <text class="circle__text" x="0" y="135" fill="#fff">ПРОЦЕСС ВЕРСТКИ </text>
+                  <circle r="90" cx="275" cy="100" stroke="#9e009e" stroke-width="20" fill="transparent" style="clip-path: url(#rect1);"></circle>
+                  <text class="circle__text" x="0" y="135" fill="url(#linearGradient)">ПРОЦЕСС ВЕРСТКИ </text>
                 </svg>
               </div>
             </div>
@@ -780,8 +791,8 @@
                   </div>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6">
-                  <div class="pageProofs__content">
-                    <div class="pageProofs__content-img lastarrow"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></div>
+                  <div class="pageProofs__content lastarrow">
+                    <div class="pageProofs__content-img"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></div>
                     <div class="pageProofs__content-name">
                       <p>Устранение ошибок</p>
                     </div>
@@ -801,7 +812,7 @@
       <section class="works">
         <div class="angleUp">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 1920 100" style="enable-background:new 0 0 1920 100;" xml:space="preserve">
-            <use xlink:href="#angleUp" x="0.0000" y="0.0000" fill="#DC143C"></use>
+            <use xlink:href="#angleUp" x="0.0000" y="0.0000" fill="#4DC611"></use>
           </svg>
         </div>
         <div class="angleDown">
@@ -809,9 +820,17 @@
             <use xlink:href="#angleUp" x="0.0000" y="100.0000" fill="#fff" transform="rotate(180, 960, 100)"></use>
           </svg>
         </div>
-        <div class="container">
-          <h2 class="works__title wow slideInUp" id="work">Портфолио</h2>
-          <div class="title__icon wow slideInUp"><i class="fa fa-camera" aria-hidden="true"></i></div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col">
+              <div class="title">
+                <svg class="circle" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 350 200" style="enable-background:new 0 0 350 200;" xml:space="preserve">
+                  <circle r="90" cx="175" cy="100" stroke="#9e009e" stroke-width="20" fill="transparent" style="clip-path: url(#rect1);"></circle>
+                  <text class="circle__text" x="0" y="135" fill="url(#linearGradient)">ПОРТФОЛИО</text>
+                </svg>
+              </div>
+            </div>
+          </div>
           <div class="row justify-content-center">
             <nav class="works__nav">
               <ul>

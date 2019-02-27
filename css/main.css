@@ -497,7 +497,10 @@ a:hover {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
-  background: #00008B;
+  background: -webkit-gradient(linear, left bottom, left top, from(#2430DA), color-stop(50%, #4040BE), to(#2BD3CD));
+  background: -webkit-linear-gradient(bottom, #2430DA 0%, #4040BE 50%, #2BD3CD 100%);
+  background: -o-linear-gradient(bottom, #2430DA 0%, #4040BE 50%, #2BD3CD 100%);
+  background: linear-gradient(to top, #2430DA 0%, #4040BE 50%, #2BD3CD 100%);
 }
 
 .aboutMe__info {
@@ -813,8 +816,10 @@ a:hover {
 .pageProofs {
   position: relative;
   padding: 50px;
-  background: #DC143C;
-  color: #6EC1D2;
+  background: -webkit-gradient(linear, left bottom, left top, from(#4DC611), color-stop(50%, #61C85F), to(#7EC7A9));
+  background: -webkit-linear-gradient(bottom, #4DC611 0%, #61C85F 50%, #7EC7A9 100%);
+  background: -o-linear-gradient(bottom, #4DC611 0%, #61C85F 50%, #7EC7A9 100%);
+  background: linear-gradient(to top, #4DC611 0%, #61C85F 50%, #7EC7A9 100%);
 }
 
 .pageProofs .title {
@@ -822,7 +827,11 @@ a:hover {
 }
 
 .pageProofs .tag {
-  color: #7BC13D;
+  color: #9e009e;
+}
+
+.pageProofs .lastarrow::after {
+  display: none;
 }
 
 .pageProofs__content {
@@ -842,8 +851,21 @@ a:hover {
   transition: transform 1s, -webkit-transform 1s;
 }
 
-.pageProofs__content .lastarrow::after {
-  display: none;
+.pageProofs__content:after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 5vw;
+  height: 5vw;
+  top: 45%;
+  right: -3.5vw;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background: url("../img/arrow.svg") center center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  z-index: 10;
 }
 
 .pageProofs__content-img {
@@ -867,25 +889,10 @@ a:hover {
   z-index: 10;
 }
 
-.pageProofs__content-img:after {
-  display: block;
-  position: absolute;
-  content: "";
-  width: 100px;
-  height: 100px;
-  top: 50%;
-  right: -100px;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  background: url("../img/arrow.svg") center center no-repeat;
-  -webkit-background-size: cover;
-  background-size: cover;
-}
-
 .pageProofs__content-name {
   font-size: 16px;
   font-family: "Lato-Heavy", sans-serif;
+  color: #2c3e50;
 }
 
 /*==============================PORTFOLIO=============================*/
@@ -911,19 +918,8 @@ a:hover {
   background: radial-gradient(ellipse at center, rgba(158, 158, 158, 0.7) 0%, rgba(158, 158, 158, 0.7) 0%, rgba(66, 66, 66, 0.7) 52%, rgba(0, 0, 0, 0.7) 100%), url("../img/pattern.png");
 }
 
-.works__title {
-  position: relative;
-  color: #fff;
-  z-index: 50;
-}
-
-.works .title__icon {
-  color: #fff;
-}
-
-.works .title__icon:after,
-.works .title__icon:before {
-  border-bottom: 2px solid #fff;
+.works .title {
+  width: 280px;
 }
 
 .works__nav {

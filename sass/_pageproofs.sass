@@ -1,12 +1,13 @@
 .pageProofs
 	position: relative
 	padding: 50px
-	background: #DC143C
-	color: #6EC1D2
+	background: linear-gradient(to top, #4DC611 0%, #61C85F 50%, #7EC7A9 100%)
 	.title
 		width: 440px
 	.tag
-		color: #7BC13D
+		color: #9e009e
+	.lastarrow::after
+			display: none	
 	&__content
 		position: relative
 		width: 100%
@@ -16,8 +17,16 @@
 		transform-style: preserve-3d
 		transform: rotateY(-90deg)
 		transition: transform 1s
-		.lastarrow::after
-			display: none
+		&:after
+			+pseudo
+			width: 5vw
+			height: 5vw
+			top: 45%
+			right: -3.5vw 
+			transform: translateY(-50%)			
+			background: url('../img/arrow.svg') center center no-repeat
+			background-size: cover	
+			z-index: 10	
 		&-img 
 			position: relative
 			width: 140px
@@ -33,18 +42,11 @@
 			font-weight: bold
 			line-height: 130px
 			z-index: 10	
-			&:after
-				+pseudo
-				width: 100px
-				height: 100px
-				top: 50%
-				right: -100px 
-				transform: translateY(-50%)			
-				background: url('../img/arrow.svg') center center no-repeat
-				background-size: cover	
+			
 		&-name
 			font-size: 16px
 			font-family: $titlefont
+			color: $accent
 		
 			
 
