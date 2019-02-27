@@ -92,6 +92,7 @@
         </div>
       </div>
     </header>
+    <!--MAIN-->
     <main class="main">
       <!--ABOUT ME-->
       <section class="aboutMe">
@@ -312,14 +313,17 @@
       </section>
       <!--SKILLS-->
       <section class="skills">
-        <div class="skills__angleUp">
+        <div class="angleUp">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 1920 100" style="enable-background:new 0 0 1920 100;" xml:space="preserve">
-            <polygon points="0,0 1920,0 0,100" fill="#00008B"></polygon>
+            <defs>
+              <polygon id="angleUp" points="0,0 1920,0 0,100"></polygon>
+            </defs>
+            <use xlink:href="#angleUp" x="0.0000" y="0.0000" fill="#00008B"></use>
           </svg>
         </div>
-        <div class="skills__angleDown">
+        <div class="angleDown">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 1920 100" style="enable-background:new 0 0 1920 100;" xml:space="preserve">
-            <polygon points="0,100 1920,100 1920,0" fill="#DC143C"></polygon>
+            <use xlink:href="#angleUp" x="0.0000" y="100.0000" fill="#DC143C" transform="rotate(180, 960, 100)"></use>
           </svg>
         </div>
         <div class="container">
@@ -745,10 +749,10 @@
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6">
                   <div class="pageProofs__content">
-                    <div class="pageProofs__content-name">
-                      <p>Верстка контента</p>
-                    </div>
                     <div class="pageProofs__content-img"><i class="fa fa-html5" aria-hidden="true"></i></div>
+                    <div class="pageProofs__content-name">
+                      <p>Верстка контента		</p>
+                    </div>
                   </div>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6">
@@ -761,10 +765,10 @@
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6">
                   <div class="pageProofs__content">
+                    <div class="pageProofs__content-img"><i class="fa fa-mobile" aria-hidden="true"></i></div>
                     <div class="pageProofs__content-name">
                       <p>Адаптивная верстка</p>
                     </div>
-                    <div class="pageProofs__content-img"><i class="fa fa-mobile" aria-hidden="true"></i></div>
                   </div>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6">
@@ -777,10 +781,10 @@
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6">
                   <div class="pageProofs__content">
+                    <div class="pageProofs__content-img lastarrow"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></div>
                     <div class="pageProofs__content-name">
                       <p>Устранение ошибок</p>
                     </div>
-                    <div class="pageProofs__content-img"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></div>
                   </div>
                 </div>
               </div>
@@ -793,7 +797,189 @@
           </div>
         </div>
       </section>
+      <!--PORTFOLIO-->
+      <section class="works">
+        <div class="angleUp">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 1920 100" style="enable-background:new 0 0 1920 100;" xml:space="preserve">
+            <use xlink:href="#angleUp" x="0.0000" y="0.0000" fill="#DC143C"></use>
+          </svg>
+        </div>
+        <div class="angleDown">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 1920 100" style="enable-background:new 0 0 1920 100;" xml:space="preserve">
+            <use xlink:href="#angleUp" x="0.0000" y="100.0000" fill="#fff" transform="rotate(180, 960, 100)"></use>
+          </svg>
+        </div>
+        <div class="container">
+          <h2 class="works__title wow slideInUp" id="work">Портфолио</h2>
+          <div class="title__icon wow slideInUp"><i class="fa fa-camera" aria-hidden="true"></i></div>
+          <div class="row justify-content-center">
+            <nav class="works__nav">
+              <ul>
+                <li><a class="works__nav-elem filter" data-filter="all"><span>Все работы</span></a></li>
+                <li><a class="works__nav-elem filter" data-filter="#firstStep"><span>Первые шаги</span></a></li>
+                <li><a class="works__nav-elem filter" data-filter="#bootstrap"><span>Bootstrap</span></a></li>
+                <li><a class="works__nav-elem filter" data-filter="#smartgrid"><span>Smartgrid</span></a></li>
+                <li><a class="works__nav-elem filter" data-filter="#adaptive"><span>Без фреймворков</span></a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="row">
+            <div class="works__block" id="contianer">
+              <div class="works__block-elem" id="bootstrap">
+                <div class="works__block-elem-way">
+                  <div class="works__block-elem-way-row">
+                    <p>Сборщик Gulp. Адаптив на bootstrap.Многостраничник. Сданный проект</p><a href="https://mikhalich2701.github.io/gmg/" target="_blank">Посмотреть</a>
+                  </div>
+                </div><img src="img/gmg.jpg" alt="Сайт">
+              </div>
+              <div class="works__block-elem" id="bootstrap">
+                <div class="works__block-elem-way">
+                  <div class="works__block-elem-way-row">
+                    <p>Сборщик Gulp. Адаптив на bootstrap</p><a href="https://mikhalich2701.github.io/introdiz/" target="_blank">Посмотреть</a>
+                  </div>
+                </div><img src="img/introdiz.jpg" alt="Сайт">
+              </div>
+              <div class="works__block-elem" id="firstStep">
+                <div class="works__block-elem-way">
+                  <div class="works__block-elem-way-row">
+                    <p>Практика в 3D трансформациях</p><a href="https://mikhalich2701.github.io/3D_effects/" target="_blank">Посмотреть</a>
+                  </div>
+                </div><img src="img/3d.jpg" alt="Сайт">
+              </div>
+              <div class="works__block-elem" id="bootstrap">
+                <div class="works__block-elem-way">
+                  <div class="works__block-elem-way-row">
+                    <p>Первый адаптив на bootstrap</p><a href="https://mikhalich2701.github.io/bestfood/" target="_blank">Посмотреть</a>
+                  </div>
+                </div><img src="img/bestfood.jpg" alt="Сайт">
+              </div>
+              <div class="works__block-elem" id="smartgrid">
+                <div class="works__block-elem-way">
+                  <div class="works__block-elem-way-row">
+                    <p>Сборщик Gulp. Адаптив на smartgrid</p><a href="https://mikhalich2701.github.io/redrute/" target="_blank">Посмотреть</a>
+                  </div>
+                </div><img src="img/redrute.jpg" alt="Сайт">
+              </div>
+              <div class="works__block-elem" id="adaptive">
+                <div class="works__block-elem-way">
+                  <div class="works__block-elem-way-row">
+                    <p>Сайт с чистым js и адаптивом без фреймворков</p><a href="https://mikhalich2701.github.io/topclass/" target="_blank">Посмотреть</a>
+                  </div>
+                </div><img src="img/topclass.jpg" alt="Сайт">
+              </div>
+              <div class="works__block-elem" id="smartgrid">
+                <div class="works__block-elem-way">
+                  <div class="works__block-elem-way-row">
+                    <p>Сборщик Gulp. Адаптив на smartgrid. Многостраничник.</p><a href="https://mikhalich2701.github.io/socialagency/" target="_blank">Посмотреть</a>
+                  </div>
+                </div><img src="img/social.jpg" alt="Сайт">
+              </div>
+              <div class="works__block-elem" id="bootstrap">
+                <div class="works__block-elem-way">
+                  <div class="works__block-elem-way-row">
+                    <p>Сборщик Gulp. Адаптив на bootstrap</p><a href="#">Посмотреть</a>
+                  </div>
+                </div><img src="img/portfolio.jpg" alt="Сайт">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--CONTACT-->
+      <section class="contact">
+        <div class="container">
+          <h2 class="contact__title wow slideInUp" id="contact">Контакты</h2>
+          <div class="title__icon wow slideInUp"><i class="fa fa-comment" aria-hidden="true"></i></div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="contact__elem">
+                <div class="contact__elem-logo logo1"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                <h5 class="contact__elem-title">Adress</h5>
+                <p>Moscow</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="contact__elem elem2">
+                <div class="contact__elem-logo"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                <h5 class="contact__elem-title">Email</h5>
+                <p><a href="mailto:mikhalich2701@yandex.ru">mikhalich2701@yandex.ru</a></p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="contact__elem elem3">
+                <div class="contact__elem-logo"><i class="fa fa-mobile" aria-hidden="true"></i></div>
+                <h5 class="contact__elem-title">Phone</h5>
+                <p><a href="tel:+79263636824">+7 (926) 363 68 24 </a></p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="contact__elem elem4">
+                <div class="contact__elem-logo"><i class="fa fa-skype" aria-hidden="true"></i></div>
+                <h5 class="contact__elem-title">Skype</h5>
+                <p><a href="skype:live:mikhalich2701_1">live:mikhalich2701_1</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--FEEDBACK-->
+      <section class="feedback">
+        <div class="angleUp">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 1920 100" style="enable-background:new 0 0 1920 100;" xml:space="preserve">
+            <use xlink:href="#angleUp" x="0.0000" y="0.0000" fill="#fff"></use>
+          </svg>
+        </div>
+        <div class="angleDown">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 1920 100" style="enable-background:new 0 0 1920 100;" xml:space="preserve">
+            <use xlink:href="#angleUp" x="0.0000" y="100.0000" fill="#ccc" transform="rotate(180, 960, 100)"></use>
+          </svg>
+        </div>
+        <div class="container">
+          <h2 class="feedback__title wow slideInUp" id="feedback">Отправить заявку</h2>
+          <div class="title__icon wow slideInUp"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+          <p class="feedback__text">Для того, чтобы определить сроки выполнеия и стоимость работ мне необходимы макеты сайта и техническое задание с требованиями по выполнению проекта.</p>
+          <form class="form" id="myForm">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form__block">
+                  <div class="form__row">
+                    <input class="form__enter" type="text" name="name" placeholder="Ваше имя">
+                  </div>
+                  <div class="form__row">
+                    <input class="form__enter" type="email" name="email" placeholder="Ваш Email">
+                  </div>
+                  <div class="form__row">
+                    <input class="form__enter" type="text" name="subject" placeholder="Тема">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form__block">
+                  <div class="form__row">
+                    <textarea class="form__textarea" name="message" placeholder="Ваше сообщение"></textarea>
+                  </div>
+                  <button class="form__button" type="submit">Отправить</button>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div id="answer"></div>
+        </div>
+      </section>
     </main>
+    <!--FOOtER-->
+    <footer class="footer">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="footer__social"><a class="footer__social-elem vk wow rollIn" href="https://vk.com/mikhaylovsky80" target="_blank" data-wow-duration="1s"><i class="fa fa-vk" aria-hidden="true"></i></a><a class="footer__social-elem facebook wow rollIn" href="https://www.facebook.com/profile.php?id=100008224726175&amp;ref=bookmarks" target="_blank" data-wow-duration="1s" data-wow-delay=".1s"><i class="fa fa-facebook" aria-hidden="true"></i></a><a class="footer__social-elem ok wow rollIn" href="https://www.ok.ru/profile/524344028624" target="_blank" data-wow-duration="1s" data-wow-delay=".2s"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a><a class="footer__social-elem github wow rollIn" href="https://github.com/mikhalich2701" target="_blank" data-wow-duration="1s" data-wow-delay=".3s"><i class="fa fa-github-alt" aria-hidden="true"></i></a></div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="footer__social-develop">
+            <p class="wow slideInUp"><i class="fa fa-copyright" aria-hidden="true"></i><span>Portfolio</span> 2018 - Developed by <span>Alexey Mikhailovsky</span></p>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!--SCRIPTS-->
     <script src="js/libs.min.js"></script>
     <script src="js/common.js"></script>

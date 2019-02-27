@@ -1,0 +1,74 @@
+.contact
+	padding: 100px 0
+	background: #fff
+	&__elem
+		position: relative
+		width: 200px
+		border-radius: 50%
+		margin: 0 auto
+		font-family: 'ralewaybold', sans-serif
+		text-align: center
+		box-sizing: border-box
+		color: $accent
+		z-index: 100
+		&:hover &-logo
+			background: #36a955
+		&:hover::before
+			top: 6px
+			left: 30px
+			opacity: 1		
+		&:before
+			content: ""
+			position: absolute
+			width: 150px
+			height: 150px
+			top: 0px
+			left: 15px
+			border-radius: 50%
+			background: #36a955
+			opacity: 0
+			transition: .5s
+			z-index: -1		
+		&-logo
+			display: inline-block
+			width: 150px
+			height: 150px
+			border-radius: 50%
+			border: 5px solid #fff
+			background: $accent
+			color: #fff
+			font-size: 64px
+			line-height: 132px		
+		&-title
+			padding: 20px 0
+			font-family: 'ralewaybold', sans-serif
+			font-size: 28px
+			color: $accent	
+		& p
+			font-size: 16px
+			line-height: 1.5
+			& a
+				color: $accent
+				&:hover
+					color: #d93025	
+	& .elem2
+		&:before
+			background: #d93025	
+		&:hover .contact__elem-logo
+			background: #d93025	
+	& .elem3
+		&:before
+			background: $accent	
+		&:hover .contact__elem-logo	
+			background: $accent	
+		& p
+			& a:hover
+				color: $accent	
+	& .elem4
+		&:before
+			background: #00aff0	
+		&:hover .contact__elem-logo	
+			background: #00aff0	
+		& p
+			& a:hover
+				color: #00aff0

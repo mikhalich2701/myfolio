@@ -1,13 +1,16 @@
 
 <section class="skills">
-  <div class="skills__angleUp">
+  <div class="angleUp">
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 1920 100" style="enable-background:new 0 0 1920 100;" xml:space="preserve">
-      <polygon points="0,0 1920,0 0,100" fill="#00008B"></polygon>
+      <defs>
+        <polygon id="angleUp" points="0,0 1920,0 0,100"></polygon>
+      </defs>
+      <use xlink:href="#angleUp" x="0.0000" y="0.0000" fill="#00008B"></use>
     </svg>
   </div>
-  <div class="skills__angleDown">
+  <div class="angleDown">
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 1920 100" style="enable-background:new 0 0 1920 100;" xml:space="preserve">
-      <polygon points="0,100 1920,100 1920,0" fill="#DC143C"></polygon>
+      <use xlink:href="#angleUp" x="0.0000" y="100.0000" fill="#DC143C" transform="rotate(180, 960, 100)"></use>
     </svg>
   </div>
   <div class="container">

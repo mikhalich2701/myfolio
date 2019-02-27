@@ -1,6 +1,5 @@
 .pageProofs
 	position: relative
-	margin-bottom: 300px
 	padding: 50px
 	background: #DC143C
 	color: #6EC1D2
@@ -17,22 +16,35 @@
 		transform-style: preserve-3d
 		transform: rotateY(-90deg)
 		transition: transform 1s
-		&-img
+		.lastarrow::after
+			display: none
+		&-img 
 			position: relative
 			width: 140px
 			height: 140px
 			margin: 0 auto
 			margin-bottom: 10px
-			background: lighten($accent, 50%)
-			border-radius: 10px
-			border: 2px solid $accent
-			box-shadow: inset 0 0 40px 10px lighten($accent, 10%)
+			background: linear-gradient(135deg, #EE86B9 0%, #9e009e 100%)
+			border-radius: 50%
+			border: 4px solid #9e009e
+			box-shadow: inset 0 0 4px 2px darken(#9e009e, 10%)
 			font-size: 60px
 			color: $accent
 			font-weight: bold
 			line-height: 130px
-			z-index: 10		
+			z-index: 10	
+			&:after
+				+pseudo
+				width: 100px
+				height: 100px
+				top: 50%
+				right: -100px 
+				transform: translateY(-50%)			
+				background: url('../img/arrow.svg') center center no-repeat
+				background-size: cover	
 		&-name
-			margin-bottom: 10px
 			font-size: 16px
 			font-family: $titlefont
+		
+			
+

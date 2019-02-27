@@ -1,0 +1,49 @@
+.footer
+	padding: 50px
+	&__social
+		text-align: center
+		&-elem
+			display: inline-block
+			vertical-align: top
+			position: relative
+			margin: 0 20px
+			margin-bottom: 40px
+			width: 50px
+			height: 50px
+			border-radius: 50%
+			background: rgba(0, 0, 0, 0.5)
+			text-align: center
+			font-size: 28px
+			line-height: 50px
+			color: white
+			z-index: 10
+			&:hover
+				color: white			
+			&:hover::after
+				left: 0
+				bottom: 0
+				right: 0
+				top: 0
+				opacity: 1			
+			&:after
+				content: ""
+				position: absolute
+				background: #4c75a3
+				border-radius: 50%
+				left: -10px
+				bottom: -10px
+				right: -10px
+				top: -10px
+				opacity: 0
+				z-index: -1
+				transition: .3s		
+		& .facebook:after
+				background: #3b5998		
+		& .ok:after
+			background: #ff7f50		
+		& .github:after
+			background: #24292e		
+		&-develop
+			text-align: center
+			& i, & span
+				font-weight: bold

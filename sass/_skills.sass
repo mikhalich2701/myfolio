@@ -13,18 +13,6 @@
 		left: 0
 		top: 0
 		background: radial-gradient(rgba(#000, .3) 0%,rgba(#000, .3) 100%), url('../img/pattern.png')
-	&__angleUp
-		position: absolute
-		width: 100%
-		left: 0
-		top: 0
-		z-index: 100
-	&__angleDown
-		position: absolute
-		width: 100%
-		left: 0
-		bottom: 0
-		z-index: 100
 	.title
 		width: 320px
 		height: 160px
@@ -40,6 +28,7 @@
 	border-radius: 50%
 	cursor: pointer
 	overflow: hidden
+	transition: all .5s
 	+r(1200)
 		width: 15vw
 		height: 15vw

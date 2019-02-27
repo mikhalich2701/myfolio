@@ -34,6 +34,12 @@ $(document).ready(function(){
       ]
     });
 
+    $('#contianer').mixItUp({
+        selectors: {
+            target: '.works__block-elem'
+        }
+    });
+
     var flag = 0;
 
     var windowHeight = $(window).height(); 
@@ -62,7 +68,7 @@ $(document).ready(function(){
                         clearInterval(navItem);
                     }, i * 150);
                 });
-             },400);                
+             },40);                
         } else{
             $('.navigate').css('left', '100%');
             $('.navigate__item-link').css('padding-left', '300px').css('opacity', '0');

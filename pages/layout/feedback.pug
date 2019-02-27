@@ -1,0 +1,30 @@
+section.feedback
+	.angleUp
+		svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 1920 100', style='enable-background:new 0 0 1920 100;', xml:space='preserve')
+			use(xlink:href='#angleUp' x='0.0000' y='0.0000' fill="#fff")
+	.angleDown
+		svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 1920 100', style='enable-background:new 0 0 1920 100;', xml:space='preserve')
+			use(xlink:href='#angleUp' x='0.0000' y='100.0000' fill="#ccc" transform="rotate(180, 960, 100)")
+	.container
+		h2#feedback.feedback__title.wow.slideInUp Отправить заявку
+		.title__icon.wow.slideInUp
+			i.fa.fa-envelope(aria-hidden="true")
+		p.feedback__text
+			| Для того, чтобы определить сроки выполнеия и стоимость работ мне необходимы макеты сайта и техническое задание с требованиями по выполнению проекта.
+		form#myForm.form
+			.row
+				.col-md-6
+					.form__block
+						.form__row
+							input.form__enter(type="text", name="name", placeholder="Ваше имя")
+						.form__row
+							input.form__enter(type="email", name="email", placeholder="Ваш Email")
+						.form__row
+							input.form__enter(type="text", name="subject", placeholder="Тема")
+				.col-md-6
+					.form__block
+						.form__row
+							textarea.form__textarea(name="message", placeholder="Ваше сообщение")
+						button.form__button(type="submit")
+							| Отправить
+		#answer
