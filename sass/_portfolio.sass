@@ -1,6 +1,6 @@
 .works
 	position: relative
-	padding: 100px
+	padding: 100px 0
 	background: url('../img/work_bg.jpg') 50% 0 no-repeat
 	background-size: cover
 	background-attachment: fixed;
@@ -18,12 +18,15 @@
 	&__nav
 		margin-bottom: 50px
 		& ul
-			display: flex		
+			display: flex
+			width: 100%	
+			& li
+				width: 20%	
 		&-elem
 			position: relative
 			display: block
-			margin: 0 5px
-			padding: 15px
+			width: 90%
+			+push-auto
 			border: 3px solid #fff
 			text-transform: uppercase
 			font-weight: bold
@@ -51,6 +54,7 @@
 	&__block
 		display: flex
 		position: relative
+		margin-left: 50px
 		width: 100%
 		flex-wrap: wrap
 		&-elem

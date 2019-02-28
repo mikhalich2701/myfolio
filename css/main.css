@@ -862,14 +862,13 @@ a:hover {
   content: "";
   width: 5vw;
   height: 5vw;
-  top: 45%;
+  top: 20%;
   right: -3.5vw;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
   background: url("../img/arrow.svg") center center no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
+  -webkit-animation: arrowmove .5s linear infinite alternate;
+  animation: arrowmove .5s linear infinite alternate;
   z-index: 10;
 }
 
@@ -904,7 +903,7 @@ a:hover {
 
 .works {
   position: relative;
-  padding: 100px;
+  padding: 100px 0;
   background: url("../img/work_bg.jpg") 50% 0 no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
@@ -936,13 +935,19 @@ a:hover {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+}
+
+.works__nav ul li {
+  width: 20%;
 }
 
 .works__nav-elem {
   position: relative;
   display: block;
-  margin: 0 5px;
-  padding: 15px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
   border: 3px solid #fff;
   text-transform: uppercase;
   font-weight: bold;
@@ -995,6 +1000,7 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  margin-left: 50px;
   width: 100%;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
@@ -1616,6 +1622,30 @@ a:hover {
 
   100% {
     background: #D84315;
+  }
+}
+
+@-webkit-keyframes arrowmove {
+  from {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  from {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+}
+
+@keyframes arrowmove {
+  from {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  from {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
   }
 }
 

@@ -12,71 +12,80 @@ section.works
 					svg.circle(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 350 200', style='enable-background:new 0 0 350 200;', xml:space='preserve')
 						circle(r="90" cx="175" cy="100" stroke="#9e009e" stroke-width="20" fill="transparent" style="clip-path: url(#rect1);")
 						text.circle__text(x="0" y="135" fill="url(#linearGradient)") ПОРТФОЛИО
+	.container-fluid
 		.row.justify-content-center
-			nav.works__nav
-				ul
-					li
-						a.works__nav-elem.filter(data-filter="all")
-							span Все работы
-					li
-						a.works__nav-elem.filter(data-filter="#firstStep")
-							span Первые шаги
-					li
-						a.works__nav-elem.filter(data-filter="#bootstrap")
-							span Bootstrap
-					li
-						a.works__nav-elem.filter(data-filter="#smartgrid")
-							span Smartgrid
-					li
-						a.works__nav-elem.filter(data-filter="#adaptive")
-							span Без фреймворков
-		.row
-			#contianer.works__block
-				.works__block-elem#bootstrap
-					.works__block-elem-way
-						.works__block-elem-way-row
-							p Сборщик Gulp. Адаптив на bootstrap.Многостраничник. Сданный проект
-							a(href="https://mikhalich2701.github.io/gmg/" target="_blank") Посмотреть
-					img(src="img/gmg.jpg" alt="Сайт")
-				.works__block-elem#bootstrap
-					.works__block-elem-way
-						.works__block-elem-way-row
-							p Сборщик Gulp. Адаптив на bootstrap
-							a(href="https://mikhalich2701.github.io/introdiz/" target="_blank") Посмотреть
-					img(src="img/introdiz.jpg" alt="Сайт")
-				.works__block-elem#firstStep
-					.works__block-elem-way
-						.works__block-elem-way-row
-							p Практика в 3D трансформациях
-							a(href="https://mikhalich2701.github.io/3D_effects/" target="_blank") Посмотреть
-					img(src="img/3d.jpg" alt="Сайт")
-				.works__block-elem#bootstrap
-					.works__block-elem-way
-						.works__block-elem-way-row
-							p Первый адаптив на bootstrap
-							a(href="https://mikhalich2701.github.io/bestfood/" target="_blank") Посмотреть
-					img(src="img/bestfood.jpg" alt="Сайт")
-				.works__block-elem#smartgrid
-					.works__block-elem-way
-						.works__block-elem-way-row
-							p Сборщик Gulp. Адаптив на smartgrid
-							a(href="https://mikhalich2701.github.io/redrute/" target="_blank") Посмотреть
-					img(src="img/redrute.jpg" alt="Сайт")
-				.works__block-elem#adaptive
-					.works__block-elem-way
-						.works__block-elem-way-row
-							p Сайт с чистым js и адаптивом без фреймворков
-							a(href="https://mikhalich2701.github.io/topclass/" target="_blank") Посмотреть
-					img(src="img/topclass.jpg" alt="Сайт")
-				.works__block-elem#smartgrid
-					.works__block-elem-way
-						.works__block-elem-way-row
-							p Сборщик Gulp. Адаптив на smartgrid. Многостраничник.
-							a(href="https://mikhalich2701.github.io/socialagency/" target="_blank") Посмотреть
-					img(src="img/social.jpg" alt="Сайт")
-				.works__block-elem#bootstrap
-					.works__block-elem-way
-						.works__block-elem-way-row
-							p Сборщик Gulp. Адаптив на bootstrap
-							a(href="#") Посмотреть
-					img(src="img/portfolio.jpg" alt="Сайт")
+			.col-xl-10.col-lg-12
+				p.tag &lt;works&gt;
+		.row.justify-content-center
+			.col-xl-10.col-lg-12
+				.row.justify-content-center
+					nav.works__nav
+						ul
+							li
+								a.works__nav-elem.filter(data-filter="all")
+									span Все работы
+							li
+								a.works__nav-elem.filter(data-filter="#firstStep")
+									span Первые шаги
+							li
+								a.works__nav-elem.filter(data-filter="#bootstrap")
+									span Bootstrap
+							li
+								a.works__nav-elem.filter(data-filter="#smartgrid")
+									span Smartgrid
+							li
+								a.works__nav-elem.filter(data-filter="#adaptive")
+									span Без фреймворков
+				.row
+					#contianer.works__block
+						.works__block-elem#bootstrap
+							.works__block-elem-way
+								.works__block-elem-way-row
+									p Сборщик Gulp. Адаптив на bootstrap.Многостраничник. Сданный проект
+									a(href="https://mikhalich2701.github.io/gmg/" target="_blank") Посмотреть
+							img(src="img/gmg.jpg" alt="Сайт")
+						.works__block-elem#bootstrap
+							.works__block-elem-way
+								.works__block-elem-way-row
+									p Сборщик Gulp. Адаптив на bootstrap
+									a(href="https://mikhalich2701.github.io/introdiz/" target="_blank") Посмотреть
+							img(src="img/introdiz.jpg" alt="Сайт")
+						.works__block-elem#firstStep
+							.works__block-elem-way
+								.works__block-elem-way-row
+									p Практика в 3D трансформациях
+									a(href="https://mikhalich2701.github.io/3D_effects/" target="_blank") Посмотреть
+							img(src="img/3d.jpg" alt="Сайт")
+						.works__block-elem#bootstrap
+							.works__block-elem-way
+								.works__block-elem-way-row
+									p Первый адаптив на bootstrap
+									a(href="https://mikhalich2701.github.io/bestfood/" target="_blank") Посмотреть
+							img(src="img/bestfood.jpg" alt="Сайт")
+						.works__block-elem#smartgrid
+							.works__block-elem-way
+								.works__block-elem-way-row
+									p Сборщик Gulp. Адаптив на smartgrid
+									a(href="https://mikhalich2701.github.io/redrute/" target="_blank") Посмотреть
+							img(src="img/redrute.jpg" alt="Сайт")
+						.works__block-elem#adaptive
+							.works__block-elem-way
+								.works__block-elem-way-row
+									p Сайт с чистым js и адаптивом без фреймворков
+									a(href="https://mikhalich2701.github.io/topclass/" target="_blank") Посмотреть
+							img(src="img/topclass.jpg" alt="Сайт")
+						.works__block-elem#smartgrid
+							.works__block-elem-way
+								.works__block-elem-way-row
+									p Сборщик Gulp. Адаптив на smartgrid. Многостраничник.
+									a(href="https://mikhalich2701.github.io/socialagency/" target="_blank") Посмотреть
+							img(src="img/social.jpg" alt="Сайт")
+						.works__block-elem#bootstrap
+							.works__block-elem-way
+								.works__block-elem-way-row
+									p Сборщик Gulp. Адаптив на bootstrap
+									a(href="#") Посмотреть
+							img(src="img/portfolio.jpg" alt="Сайт")
+		.row.justify-content-center
+			.col-xl-10.col-lg-12
+				p.tag &lt;works&gt;

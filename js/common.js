@@ -75,7 +75,17 @@ $(document).ready(function(){
         },time);
     }
 
-    //console.log($('.gexagon-item').css("transform"));
+    function getSkill(textItem, numItem, heightItem){                //Анимация навыков
+        var count = 0;
+        //console.log(numItem);
+        var persentChange = setInterval(function(){                    
+            if(count <= numItem){
+                textItem.text(count + '%');
+                heightItem.css("height", count + "%");
+                count++;
+            }            
+        }, 2000 / numItem);
+    }
 
     $('.pageProofs__content').each(function(i){                       //Задержка анимациия для секции "ПРОЦЕСС ВЕРСТКИ"
         $(this).css("transition-delay", i * 0.3 + "s");
@@ -107,26 +117,36 @@ $(document).ready(function(){
             getFoto($('.third'), 440);              
         } 
 
-        var skillSvg = $('.skills').offset().top  - windowHeight / 2;
-        if ($(document).scrollTop() >= skillSvg && flag == 0) {
-            $('.skill').each(function(){
-                var count = 0;
-                var self    = $(this);
-                var percent = parseInt(self.data('percent'));
-                var persentChange = setInterval(function(){                    
-                    if(count <= percent){
-                        self.children().eq(0).text(count + '%');
-                        self.children().eq(2).css("height", count + "%");
-                    }
-                    count++;
-                }, 10);
-            });
-            flag = 1; 
-        }
+        // var skillSvg = $('.skills').offset().top  - windowHeight / 2;
+        // if ($(document).scrollTop() >= skillSvg && flag == 0) {
+        //     $('.skill').each(function(){
+        //         var count = 0;
+        //         var self    = $(this);
+        //         var percent = parseInt(self.data('percent'));
+        //         var persentChange = setInterval(function(){                    
+        //             if(count <= percent){
+        //                 self.children().eq(0).text(count + '%');
+        //                 self.children().eq(2).css("height", count + "%");
+        //             }
+        //             count++;
+        //         }, 10);
+        //     });
+        //     flag = 1; 
+        // }
+        $('.skill').each(function(){
+            var self               = $(this),
+                flag1        = self.children().eq(0).text(),
+                persentText        = self.children().eq(0),
+                percent            = parseInt(self.data('percent')),
+                percentHeight      = self.children().eq(2),
+                offsetTopSkillitem = self.offset().top  - windowHeight / 2;
+                if ($(document).scrollTop() >= offsetTopSkillitem && flag1 === ""){
+                    getSkill(persentText, percent, percentHeight);
+                }
+        });
 
         if ($(document).scrollTop() >= $('.pageProofs').offset().top && $('.pageProofs__content').attr('class') !== 'pageProofs__content pageProofs__move'){
             $('.pageProofs__content').addClass('pageProofs__move');
-            console.log($('.pageProofs__content').attr('class'));
         }
     });
 });
