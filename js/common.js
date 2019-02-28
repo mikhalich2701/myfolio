@@ -1,39 +1,5 @@
 $(document).ready(function(){     
 
-    $('.pageProofs__resurse-row').slick({                     // SLIDER            
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        dots: false,
-        arrows: true,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        nextArrow: '.pageProofs__resurse-button-next',
-        prevArrow: '.pageProofs__resurse-button-prev',
-        responsive: [
-        {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1
-          }
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1
-          }
-        },
-        {
-          breakpoint: 576,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-      ]
-    });
-
     $('#contianer').mixItUp({
         selectors: {
             target: '.works__block-elem'
@@ -109,6 +75,12 @@ $(document).ready(function(){
         },time);
     }
 
+    //console.log($('.gexagon-item').css("transform"));
+
+    $('.pageProofs__content').each(function(i){                       //Задержка анимациия для секции "ПРОЦЕСС ВЕРСТКИ"
+        $(this).css("transition-delay", i * 0.3 + "s");
+    });
+
     $(window).scroll(function(){
         $('.title').each(function() {                                 //TITLE SVG TRANSFORM
             var self = $(this),
@@ -126,24 +98,21 @@ $(document).ready(function(){
                 self.css('transform', 'translateX(' + moveTitle + 'px)'); 
                 self.children().css('stroke-dashoffset',  (565 - move * 1.8)  + 'px');              
             } 
-            
         });
 
         var svgFoto = $('.myfoto').offset().top  - windowHeight / 2;   
-        if ($(document).scrollTop() >= svgFoto) {
+        if ($(document).scrollTop() >= svgFoto && $('.gexagon-item').css("transform") !== "matrix(1, 0, 0, 1, 0, 0)") {
             getFoto($('.first'), 400);              
             getFoto($('.second'), 420);              
             getFoto($('.third'), 440);              
         } 
 
         var skillSvg = $('.skills').offset().top  - windowHeight / 2;
-            //console.log(percent);
         if ($(document).scrollTop() >= skillSvg && flag == 0) {
             $('.skill').each(function(){
                 var count = 0;
                 var self    = $(this);
                 var percent = parseInt(self.data('percent'));
-                //self.children().eq(2).animate({height: percent + '%'}, 2000, "linear");
                 var persentChange = setInterval(function(){                    
                     if(count <= percent){
                         self.children().eq(0).text(count + '%');
@@ -155,11 +124,9 @@ $(document).ready(function(){
             flag = 1; 
         }
 
-        if ($(document).scrollTop() >= $('.pageProofs').offset().top){
-            $('.pageProofs__content').each(function(i){
-                $(this).css("transition-delay", i * 0.3 + "s");
-            });
-            $('.pageProofs__content').css("transform", "rotateY(0deg)");
+        if ($(document).scrollTop() >= $('.pageProofs').offset().top && $('.pageProofs__content').attr('class') !== 'pageProofs__content pageProofs__move'){
+            $('.pageProofs__content').addClass('pageProofs__move');
+            console.log($('.pageProofs__content').attr('class'));
         }
     });
 });

@@ -200,6 +200,11 @@ a:hover {
   transform: rotate(60deg) translate(-2px, 8px);
 }
 
+.pageProofs__move {
+  -webkit-transform: rotateY(0deg) !important;
+  transform: rotateY(0deg) !important;
+}
+
 /*==============================PRELOADER==============================*/
 
 .preloader {
