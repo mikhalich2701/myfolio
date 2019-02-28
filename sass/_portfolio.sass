@@ -3,7 +3,7 @@
 	padding: 100px 0
 	background: url('../img/work_bg.jpg') 50% 0 no-repeat
 	background-size: cover
-	background-attachment: fixed;
+	background-attachment: fixed
 	&:before
 		position: absolute
 		content: ""
@@ -11,30 +11,44 @@
 		height: 100%
 		left: 0
 		top: 0
-		background: radial-gradient(ellipse at center, rgba(#9e9e9e, .7) 0%,rgba(#9e9e9e, .7) 0%,
-		rgba(#424242, .7) 52%,rgba(#000, .7) 100%), url('../img/pattern.png')
+		background: radial-gradient(to top, rgba(#EAD270, .7) 0%,
+		rgba(#C9D288, .7) 52%,rgba(#AFC5AF, .7) 100%), url('../img/pattern.png')
+	.tag
+		color: #1E22E2
 	.title
 		width: 280px
 	&__nav
+		margin-left: 50px
 		margin-bottom: 50px
+		width: 100%
 		& ul
 			display: flex
+			justify-content: center
+			flex-wrap: wrap
 			width: 100%	
 			& li
-				width: 20%	
+				width: 20%
+				max-width: 190px
+				+r(992)
+					width: 50%
+					margin-bottom: 20px	
 		&-elem
 			position: relative
 			display: block
-			width: 90%
+			width: 95%
+			height: 50px
 			+push-auto
-			border: 3px solid #fff
+			text-align: center
+			line-height: 45px
+			border-radius: 25px
+			border: 2px solid #1E22E2
 			text-transform: uppercase
 			font-weight: bold
 			transition: background .3s
 			cursor: pointer
 			overflow: hidden
 			& span
-				color: #fff	
+				color: #1E22E2	
 				transition: color .3s	
 			&:after
 				+pseudo
@@ -43,12 +57,12 @@
 				left: -70px
 				top: 0 
 				transform: skew(-40deg)				
-				background: rgba(#ccc, 0.8)
+				background: rgba(#ccc, 0.4)
 				transition: left .5s
 			&:hover
-				background: #fff			
+				background: #1E22E2			
 			&:hover span
-				color: $accent	
+				color: #fff	
 			&:hover::after
 				left: 200px
 	&__block
