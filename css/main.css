@@ -144,6 +144,7 @@ a:hover {
   position: relative;
   margin: 50px auto;
   width: 200px;
+  max-width: 80%;
   height: 160px;
 }
 
@@ -820,7 +821,6 @@ a:hover {
 
 .pageProofs {
   position: relative;
-  padding: 50px;
   background: -webkit-gradient(linear, left bottom, left top, from(#4DC611), color-stop(50%, #61C85F), to(#7EC7A9));
   background: -webkit-linear-gradient(bottom, #4DC611 0%, #61C85F 50%, #7EC7A9 100%);
   background: -o-linear-gradient(bottom, #4DC611 0%, #61C85F 50%, #7EC7A9 100%);
@@ -860,16 +860,21 @@ a:hover {
   display: block;
   position: absolute;
   content: "";
-  width: 5vw;
-  height: 5vw;
-  top: 20%;
-  right: -3.5vw;
+  width: 60px;
+  height: 60px;
+  top: 50px;
+  right: -webkit-calc(-1vw - 35px);
+  right: calc(-1vw - 35px);
   background: url("../img/arrow.svg") center center no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
   -webkit-animation: arrowmove .5s linear infinite alternate;
   animation: arrowmove .5s linear infinite alternate;
   z-index: 10;
+}
+
+.pageProofs__content:after:after {
+  display: none;
 }
 
 .pageProofs__content-img {
@@ -1042,7 +1047,7 @@ a:hover {
   height: 100%;
   left: 0;
   top: 0;
-  background: black;
+  background: #1E22E2;
   opacity: 0;
   -webkit-transition: opacity .3s;
   -o-transition: opacity .3s;
@@ -1142,8 +1147,8 @@ a:hover {
 }
 
 .works__block-elem-way-row a:hover {
-  background: #444;
-  border: 2px solid #444;
+  background: #1E22E2;
+  border: 2px solid #1E22E2;
   color: #fff;
 }
 
@@ -1166,8 +1171,19 @@ a:hover {
 /*==============================CONTACT=============================*/
 
 .contact {
-  padding: 100px 0;
-  background: #fff;
+  padding: 20px 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(#d6ba93), to(#e8dec5));
+  background: -webkit-linear-gradient(bottom, #d6ba93 0%, #e8dec5 100%);
+  background: -o-linear-gradient(bottom, #d6ba93 0%, #e8dec5 100%);
+  background: linear-gradient(to top, #d6ba93 0%, #e8dec5 100%);
+}
+
+.contact .tag {
+  color: #2c3e50;
+}
+
+.contact .title {
+  width: 248px;
 }
 
 .contact__elem {
@@ -1294,24 +1310,17 @@ a:hover {
   height: 100%;
   left: 0;
   top: 0;
-  background: -webkit-radial-gradient(center, ellipse, rgba(158, 158, 158, 0.7) 0%, rgba(158, 158, 158, 0.7) 0%, rgba(66, 66, 66, 0.7) 52%, rgba(0, 0, 0, 0.7) 100%), url("../img/pattern.png");
-  background: -o-radial-gradient(center, ellipse, rgba(158, 158, 158, 0.7) 0%, rgba(158, 158, 158, 0.7) 0%, rgba(66, 66, 66, 0.7) 52%, rgba(0, 0, 0, 0.7) 100%), url("../img/pattern.png");
-  background: radial-gradient(ellipse at center, rgba(158, 158, 158, 0.7) 0%, rgba(158, 158, 158, 0.7) 0%, rgba(66, 66, 66, 0.7) 52%, rgba(0, 0, 0, 0.7) 100%), url("../img/pattern.png");
+  background: -webkit-radial-gradient(bottom, rgba(86, 117, 94, 0.9) 0%, rgba(155, 170, 155, 0.9) 52%, rgba(158, 193, 127, 0.9) 100%), url("../img/pattern.png");
+  background: -o-radial-gradient(bottom, rgba(86, 117, 94, 0.9) 0%, rgba(155, 170, 155, 0.9) 52%, rgba(158, 193, 127, 0.9) 100%), url("../img/pattern.png");
+  background: radial-gradient(to top, rgba(86, 117, 94, 0.9) 0%, rgba(155, 170, 155, 0.9) 52%, rgba(158, 193, 127, 0.9) 100%), url("../img/pattern.png");
 }
 
-.feedback__title {
-  position: relative;
+.feedback .title {
+  width: 464px;
+}
+
+.feedback .tag {
   color: #fff;
-  z-index: 50;
-}
-
-.feedback .title__icon {
-  color: #fff;
-}
-
-.feedback .title__icon:after,
-.feedback .title__icon:before {
-  border-bottom: 2px solid #fff;
 }
 
 .feedback__text {
@@ -1668,6 +1677,8 @@ a:hover {
   }
 }
 
+/*================================MEDIA==============================*/
+
 @media only screen and (max-width: 1600px) {
   html {
     font-size: 15px;
@@ -1696,9 +1707,29 @@ a:hover {
     font-size: 12px;
   }
 
+  .tag {
+    font-size: 2.5rem;
+  }
+
+  .pageProofs .middlearrow::after {
+    display: none;
+  }
+
+  .works {
+    padding: 20px;
+  }
+
+  .works__block-elem {
+    width: 50%;
+  }
+
   .works__nav ul li {
     width: 50%;
     margin-bottom: 20px;
+  }
+
+  .works__nav-elem {
+    font-size: 1.5rem;
   }
 }
 
@@ -1721,6 +1752,18 @@ a:hover {
     width: 30vw;
     height: 30vw;
   }
+
+  .pageProofs .middlearrow::after {
+    display: block;
+  }
+
+  .pageProofs .firstarrow::after {
+    display: none;
+  }
+
+  .pageProofs .prelastarrow::after {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 579px) {
@@ -1733,6 +1776,18 @@ a:hover {
   .skill {
     width: 70vw;
     height: 70vw;
+  }
+
+  .pageProofs .middlearrow::after {
+    display: none;
+  }
+
+  .works {
+    padding: 20px;
+  }
+
+  .works__block-elem {
+    width: 100%;
   }
 }
 

@@ -107,11 +107,14 @@ a
 	font-family: 'inconsolata', monospace
 	font-size: 1.87rem
 	color: #DC143C
+	+r(992)
+		font-size: 2.5rem
 
 .title
 	position: relative
 	margin: 50px auto
 	width: 200px
+	max-width: 80%
 	height: 160px	
 	.circle
 		stroke-dasharray: 565px
@@ -191,3 +194,7 @@ a
 /*================================ANIMATION==============================*/
 
 @import "animation"
+
+/*================================MEDIA==============================*/
+
+@import "media"

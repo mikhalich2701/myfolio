@@ -29,33 +29,16 @@
   </head>
   <body>
     <!--PRELOADER-->
-    <div class="preloader">
-      <div class="preloader__bg"></div>
-      <div class="logo">
-        <svg class="logo__svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 900 210" style="enable-background:new 0 0 900 210;" xml:space="preserve">
-          <path class="logo__svg-am" d="M0,201.5l296-195l30,45v92l-47-69c-4,4-47,34-47,34h45L0,201.5z"></path>
-          <path class="logo__svg-text" d="M429,144v-73.5h25v-19h-25v-25h41v-20h-83v137H429"></path>
-          <polygon class="logo__svg-am" points="313,6.5 372,6.5 401,51.5 401,143.5 "></polygon>
-          <g class="logo__svg-text" fill-rule="evenodd">
-            <path d="M538.5,7 A70,70 0 0,1 538.5,147 A70,70 0 0,1 538.5,7 z        M556,55 h-10 l-25,50 h10 z        M516,65 v-10 l-35,25 l35,25 v-10 l-25,-15 z        M561,65 v-10 l35,25 l-35,25 v-10 l25,-15 z" path=""></path>
-          </g>
-          <path class="logo__svg-text" d="M662,6v73.5v-1v20l0,0v25h41v20h-83v-137H662"></path>
-          <path class="logo__svg-text" d="M758,6v73.5v-1v20l0,0v25l0,0v20h-42v-137H758"></path>
-          <g class="logo__svg-text" fill-rule="evenodd">
-            <path d="M869,30.5l-1,89c-3,20-24,25-45,25h-11c-31-2-36-7-41-24v-92c3-17,18-21,38.6-22.5l19,0.3	C854,8.5,866,12.5,869,30.5z        M825.5,46.7l-0.1,64.3c-0.4,14.4-3.3,18.1-6.2,18.1h-1.5c-4.3-1.4-5-5.1-5.7-17.3l-0.4-65	c0.4-12.3,1.8-17.3,5.8-17.7l2.6,0.2C824.8,29.4,825.1,33.7,825.5,46.7z"></path>
-          </g>
-        </svg>
-      </div>
-    </div>
+    <!--include layout/preloader.pug-->
     <!--NAVIGATE-->
     <nav class="navigate">
       <ul class="navigate__box">
-        <li class="navigate__item"><a class="navigate__item-link" href="#">Обо мне</a></li>
-        <li class="navigate__item"><a class="navigate__item-link" href="#">Навыки</a></li>
-        <li class="navigate__item"><a class="navigate__item-link" href="#">Верстка</a></li>
-        <li class="navigate__item"><a class="navigate__item-link" href="#">Портфолио</a></li>
-        <li class="navigate__item"><a class="navigate__item-link" href="#">Контакты</a></li>
-        <li class="navigate__item"><a class="navigate__item-link" href="#">Заявка</a></li>
+        <li class="navigate__item"><a class="navigate__item-link" href="#about">Обо мне</a></li>
+        <li class="navigate__item"><a class="navigate__item-link" href="#skills">Навыки</a></li>
+        <li class="navigate__item"><a class="navigate__item-link" href="#pageproofs">Верстка</a></li>
+        <li class="navigate__item"><a class="navigate__item-link" href="#work">Портфолио</a></li>
+        <li class="navigate__item"><a class="navigate__item-link" href="#contact">Контакты</a></li>
+        <li class="navigate__item"><a class="navigate__item-link" href="#feedback">Заявка</a></li>
       </ul>
     </nav>
     <!--HEADER-->
@@ -95,7 +78,7 @@
     <!--MAIN-->
     <main class="main">
       <!--ABOUT ME-->
-      <section class="aboutMe">
+      <section class="aboutMe" id="about">
         <div class="container-fluid">
           <div class="row">
             <div class="col">
@@ -122,7 +105,28 @@
                       <stop stop-color="#EF6BCA" offset="100%"></stop>
                     </lineargradient>
                   </defs>
-                  <circle r="90" cx="125" cy="100" stroke="#e9b171" stroke-width="20" fill="transparent" style="clip-path: url(#rect1);"></circle>
+                  <defs>
+                    <lineargradient id="linearGradient4">
+                      <stop stop-color="#1E22E2" offset="0%"></stop>
+                      <stop stop-color="#0D83DD" offset="50%"></stop>
+                      <stop stop-color="#6A11E0" offset="100%"></stop>
+                    </lineargradient>
+                  </defs>
+                  <defs>
+                    <lineargradient id="linearGradient5">
+                      <stop stop-color="#2c3e50" offset="0%"></stop>
+                      <stop stop-color="#4E667D" offset="50%"></stop>
+                      <stop stop-color="#5B8BB9" offset="100%"></stop>
+                    </lineargradient>
+                  </defs>
+                  <defs>
+                    <lineargradient id="linearGradient6">
+                      <stop stop-color="#ffffff" offset="0%"></stop>
+                      <stop stop-color="#d3d3d3" offset="50%"></stop>
+                      <stop stop-color="#b2b2b2" offset="100%"></stop>
+                    </lineargradient>
+                  </defs>
+                  <circle r="90" cx="125" cy="100" stroke="url(#linearGradient2)" stroke-width="20" fill="transparent" style="clip-path: url(#rect1);"></circle>
                   <text class="circle__text" x="0" y="135" fill="url(#linearGradient2)">ОБО МНЕ </text>
                 </svg>
               </div>
@@ -332,7 +336,7 @@
         </div>
       </section>
       <!--SKILLS-->
-      <section class="skills">
+      <section class="skills" id="skills">
         <div class="angleUp">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 1920 100" style="enable-background:new 0 0 1920 100;" xml:space="preserve">
             <defs>
@@ -363,7 +367,7 @@
                       <rect x="0" y="140" width="400" height="60"></rect>
                     </clipPath>
                   </defs>
-                  <circle r="90" cx="200" cy="100" stroke="#DC143C" stroke-width="20" fill="transparent" style="clip-path: url(#rect1);"></circle>
+                  <circle r="90" cx="200" cy="100" stroke="url(#linearGradient)" stroke-width="20" fill="transparent" style="clip-path: url(#rect1);"></circle>
                   <text class="circle__text" x="0" y="135" fill="url(#linearGradient)">МОИ НАВЫКИ</text>
                 </svg>
               </div>
@@ -718,13 +722,13 @@
         </div>
       </section>
       <!--PAGEPROOFS-->
-      <section class="pageProofs">
+      <section class="pageProofs" id="pageproofs">
         <div class="container-fluid">
           <div class="row">
             <div class="col">
               <div class="title">
                 <svg class="circle" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 550 200" style="enable-background:new 0 0 550 200;" xml:space="preserve">
-                  <circle r="90" cx="275" cy="100" stroke="#9e009e" stroke-width="20" fill="transparent" style="clip-path: url(#rect1);"></circle>
+                  <circle r="90" cx="275" cy="100" stroke="url(#linearGradient3)" stroke-width="20" fill="transparent" style="clip-path: url(#rect1);"></circle>
                   <text class="circle__text" x="0" y="135" fill="url(#linearGradient3)">ПРОЦЕСС ВЕРСТКИ </text>
                 </svg>
               </div>
@@ -749,7 +753,7 @@
                   </div>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6">
-                  <div class="pageProofs__content">
+                  <div class="pageProofs__content firstarrow">
                     <div class="pageProofs__content-img"><i class="fa fa-html5" aria-hidden="true"></i></div>
                     <div class="pageProofs__content-name">
                       <p>Верстка контента		</p>
@@ -757,7 +761,7 @@
                   </div>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6">
-                  <div class="pageProofs__content">
+                  <div class="pageProofs__content middlearrow">
                     <div class="pageProofs__content-img"><i class="fa fa-css3" aria-hidden="true"></i></div>
                     <div class="pageProofs__content-name">
                       <p>Стилизация сайта</p>
@@ -765,7 +769,7 @@
                   </div>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6">
-                  <div class="pageProofs__content">
+                  <div class="pageProofs__content prelastarrow">
                     <div class="pageProofs__content-img"><i class="fa fa-mobile" aria-hidden="true"></i></div>
                     <div class="pageProofs__content-name">
                       <p>Адаптивная верстка</p>
@@ -799,7 +803,7 @@
         </div>
       </section>
       <!--PORTFOLIO-->
-      <section class="works">
+      <section class="works" id="work">
         <div class="angleUp">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 1920 100" style="enable-background:new 0 0 1920 100;" xml:space="preserve">
             <use xlink:href="#angleUp" x="0.0000" y="0.0000" fill="#4DC611"></use>
@@ -807,7 +811,7 @@
         </div>
         <div class="angleDown">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 1920 100" style="enable-background:new 0 0 1920 100;" xml:space="preserve">
-            <use xlink:href="#angleUp" x="0.0000" y="100.0000" fill="#fff" transform="rotate(180, 960, 100)"></use>
+            <use xlink:href="#angleUp" x="0.0000" y="100.0000" fill="#e8dec5" transform="rotate(180, 960, 100)"></use>
           </svg>
         </div>
         <div class="container-fluid">
@@ -815,8 +819,8 @@
             <div class="col">
               <div class="title">
                 <svg class="circle" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 350 200" style="enable-background:new 0 0 350 200;" xml:space="preserve">
-                  <circle r="90" cx="175" cy="100" stroke="#1E22E2" stroke-width="20" fill="transparent" style="clip-path: url(#rect1);"></circle>
-                  <text class="circle__text" x="0" y="135" fill="url(#linearGradient)">ПОРТФОЛИО</text>
+                  <circle r="90" cx="175" cy="100" stroke="url(#linearGradient4)" stroke-width="20" fill="transparent" style="clip-path: url(#rect1);"></circle>
+                  <text class="circle__text" x="0" y="135" fill="url(#linearGradient4)">ПОРТФОЛИО</text>
                 </svg>
               </div>
             </div>
@@ -905,63 +909,92 @@
           </div>
           <div class="row justify-content-center">
             <div class="col-xl-10 col-lg-12">
-              <p class="tag">&lt;works&gt;</p>
+              <p class="tag">&lt;/works&gt;</p>
             </div>
           </div>
         </div>
       </section>
       <!--CONTACT-->
-      <section class="contact">
-        <div class="container">
-          <h2 class="contact__title wow slideInUp" id="contact">Контакты</h2>
-          <div class="title__icon wow slideInUp"><i class="fa fa-comment" aria-hidden="true"></i></div>
+      <section class="contact" id="contact">
+        <div class="container-fluid">
           <div class="row">
-            <div class="col-lg-3 col-md-6">
-              <div class="contact__elem">
-                <div class="contact__elem-logo logo1"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
-                <h5 class="contact__elem-title">Adress</h5>
-                <p>Moscow</p>
+            <div class="col">
+              <div class="title">
+                <svg class="circle" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 310 200" style="enable-background:new 0 0 310 200;" xml:space="preserve">
+                  <circle r="90" cx="155" cy="100" stroke="url(#linearGradient5)" stroke-width="20" fill="transparent" style="clip-path: url(#rect1);"></circle>
+                  <text class="circle__text" x="0" y="135" fill="url(#linearGradient5)">КОНТАКТЫ</text>
+                </svg>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-              <div class="contact__elem elem2">
-                <div class="contact__elem-logo"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
-                <h5 class="contact__elem-title">Email</h5>
-                <p><a href="mailto:mikhalich2701@yandex.ru">mikhalich2701@yandex.ru</a></p>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-xl-10 col-lg-12">
+              <p class="tag">&lt;contacts&gt;</p>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-xl-10 col-lg-12">
+              <div class="row justify-content-center">
+                <div class="col-sm-4 col-xs-12">
+                  <div class="contact__elem elem2">
+                    <div class="contact__elem-logo"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                    <h5 class="contact__elem-title">Email</h5>
+                    <p><a href="mailto:mikhalich2701@yandex.ru">mikhalich2701@yandex.ru</a></p>
+                  </div>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                  <div class="contact__elem elem3">
+                    <div class="contact__elem-logo"><i class="fa fa-mobile" aria-hidden="true"></i></div>
+                    <h5 class="contact__elem-title">Phone</h5>
+                    <p><a href="tel:+79263636824">+7 (926) 363 68 24 </a></p>
+                  </div>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                  <div class="contact__elem elem4">
+                    <div class="contact__elem-logo"><i class="fa fa-skype" aria-hidden="true"></i></div>
+                    <h5 class="contact__elem-title">Skype</h5>
+                    <p><a href="skype:live:mikhalich2701_1">live:mikhalich2701_1</a></p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-              <div class="contact__elem elem3">
-                <div class="contact__elem-logo"><i class="fa fa-mobile" aria-hidden="true"></i></div>
-                <h5 class="contact__elem-title">Phone</h5>
-                <p><a href="tel:+79263636824">+7 (926) 363 68 24 </a></p>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-              <div class="contact__elem elem4">
-                <div class="contact__elem-logo"><i class="fa fa-skype" aria-hidden="true"></i></div>
-                <h5 class="contact__elem-title">Skype</h5>
-                <p><a href="skype:live:mikhalich2701_1">live:mikhalich2701_1</a></p>
-              </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-xl-10 col-lg-12">
+              <p class="tag">&lt;/contacts&gt;</p>
             </div>
           </div>
         </div>
       </section>
       <!--FEEDBACK-->
-      <section class="feedback">
+      <section class="feedback" id="feedback">
         <div class="angleUp">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 1920 100" style="enable-background:new 0 0 1920 100;" xml:space="preserve">
-            <use xlink:href="#angleUp" x="0.0000" y="0.0000" fill="#fff"></use>
+            <use xlink:href="#angleUp" x="0.0000" y="0.0000" fill="#d6ba93"></use>
           </svg>
         </div>
-        <div class="angleDown">
-          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 1920 100" style="enable-background:new 0 0 1920 100;" xml:space="preserve">
-            <use xlink:href="#angleUp" x="0.0000" y="100.0000" fill="#ccc" transform="rotate(180, 960, 100)"></use>
-          </svg>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col">
+              <div class="title">
+                <svg class="circle" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 580 200" style="enable-background:new 0 0 580 200;" xml:space="preserve">
+                  <circle r="90" cx="290" cy="100" stroke="url(#linearGradient6)" stroke-width="20" fill="transparent" style="clip-path: url(#rect1);"></circle>
+                  <text class="circle__text" x="0" y="135" fill="url(#linearGradient6)">ОТПРАВИТЬ ЗАЯВКУ </text>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-xl-10 col-lg-12">
+              <p class="tag">&lt;form&gt;</p>
+            </div>
+          </div>
         </div>
         <div class="container">
-          <h2 class="feedback__title wow slideInUp" id="feedback">Отправить заявку</h2>
-          <div class="title__icon wow slideInUp"><i class="fa fa-envelope" aria-hidden="true"></i></div>
           <p class="feedback__text">Для того, чтобы определить сроки выполнеия и стоимость работ мне необходимы макеты сайта и техническое задание с требованиями по выполнению проекта.</p>
           <form class="form" id="myForm">
             <div class="row">
@@ -989,6 +1022,13 @@
             </div>
           </form>
           <div id="answer"></div>
+        </div>
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-xl-10 col-lg-12">
+              <p class="tag">&lt;/form&gt;</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>

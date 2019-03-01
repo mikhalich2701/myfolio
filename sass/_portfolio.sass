@@ -13,6 +13,16 @@
 		top: 0
 		background: radial-gradient(to top, rgba(#EAD270, .7) 0%,
 		rgba(#C9D288, .7) 52%,rgba(#AFC5AF, .7) 100%), url('../img/pattern.png')
+	+r(992)
+		padding: 20px
+		&__block
+			&-elem
+				width: 50%
+	+r(576)
+		padding: 20px
+		&__block
+			&-elem
+				width: 100%
 	.tag
 		color: #1E22E2
 	.title
@@ -31,7 +41,7 @@
 				max-width: 190px
 				+r(992)
 					width: 50%
-					margin-bottom: 20px	
+					margin-bottom: 20px						
 		&-elem
 			position: relative
 			display: block
@@ -47,9 +57,9 @@
 			transition: background .3s
 			cursor: pointer
 			overflow: hidden
-			& span
+			span
 				color: #1E22E2	
-				transition: color .3s	
+				transition: color .3s
 			&:after
 				+pseudo
 				width: 50px
@@ -65,6 +75,8 @@
 				color: #fff	
 			&:hover::after
 				left: 200px
+			+r(992)
+				font-size: 1.5rem	
 	&__block
 		display: flex
 		position: relative
@@ -84,7 +96,7 @@
 				height: 100%
 				left: 0
 				top: 0
-				background: black
+				background: #1E22E2
 				opacity: 0
 				transition: opacity .3s			
 			&:hover:before
@@ -145,8 +157,8 @@
 						color: #fff
 						transition: all .3s
 						&:hover
-							background: #444
-							border: 2px solid #444
+							background: #1E22E2
+							border: 2px solid #1E22E2
 							color: #fff
 			&:hover &-way:before
 				transform: rotateY(0deg)

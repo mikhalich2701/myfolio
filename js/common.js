@@ -6,7 +6,16 @@ $(document).ready(function(){
         }
     });
 
-    var flag = 0;
+    // Плавный скролл к метке
+
+    $('a[href^="#"]').click(function () {
+        setTimeout(function(){
+            elementClick = $(this).attr("href");
+            destination = $(elementClick).offset().top;
+            $('html').animate( { scrollTop: destination }, 1100 );
+            return false;
+         },700);                 
+    });
 
     var windowHeight = $(window).height(); 
     
@@ -96,16 +105,14 @@ $(document).ready(function(){
             var self = $(this),
                 heightUp = self.offset().top - windowHeight / 1.2,
                 heightDown = self.offset().top  - windowHeight / 2,
-                move = ($(document).scrollTop()  - heightUp),
-                moveTitle = move * 0.2;
+                move = ($(document).scrollTop()  - heightUp);
             if ($(document).scrollTop() < heightUp) {
                 self.children().css('stroke-dashoffset', '565px');              
             } 
             if ($(document).scrollTop() > heightDown) {
                 self.children().css('stroke-dashoffset', '0px');              
             } 
-            if ($(document).scrollTop() < heightDown && $(document).scrollTop() >= heightUp) {
-                self.css('transform', 'translateX(' + moveTitle + 'px)'); 
+            if ($(document).scrollTop() < heightDown && $(document).scrollTop() >= heightUp) { 
                 self.children().css('stroke-dashoffset',  (565 - move * 1.8)  + 'px');              
             } 
         });
@@ -117,22 +124,6 @@ $(document).ready(function(){
             getFoto($('.third'), 440);              
         } 
 
-        // var skillSvg = $('.skills').offset().top  - windowHeight / 2;
-        // if ($(document).scrollTop() >= skillSvg && flag == 0) {
-        //     $('.skill').each(function(){
-        //         var count = 0;
-        //         var self    = $(this);
-        //         var percent = parseInt(self.data('percent'));
-        //         var persentChange = setInterval(function(){                    
-        //             if(count <= percent){
-        //                 self.children().eq(0).text(count + '%');
-        //                 self.children().eq(2).css("height", count + "%");
-        //             }
-        //             count++;
-        //         }, 10);
-        //     });
-        //     flag = 1; 
-        // }
         $('.skill').each(function(){
             var self               = $(this),
                 flag1        = self.children().eq(0).text(),

@@ -1,4 +1,4 @@
-section.aboutMe
+section.aboutMe#about
 	.container-fluid
 		.row
 			.col
@@ -19,7 +19,22 @@ section.aboutMe
 								stop(stop-color='#9F089F', offset='0%')
 								stop(stop-color='#C678F7', offset='50%')
 								stop(stop-color='#EF6BCA', offset='100%')
-						circle(r="90" cx="125" cy="100" stroke="#e9b171" stroke-width="20" fill="transparent" style="clip-path: url(#rect1);")
+						defs
+							lineargradient#linearGradient4
+								stop(stop-color='#1E22E2', offset='0%')
+								stop(stop-color='#0D83DD', offset='50%')
+								stop(stop-color='#6A11E0', offset='100%')
+						defs
+							lineargradient#linearGradient5
+								stop(stop-color='#2c3e50', offset='0%')
+								stop(stop-color='#4E667D', offset='50%')
+								stop(stop-color='#5B8BB9', offset='100%')
+						defs
+							lineargradient#linearGradient6
+								stop(stop-color='#ffffff', offset='0%')
+								stop(stop-color='#d3d3d3', offset='50%')
+								stop(stop-color='#b2b2b2', offset='100%')
+						circle(r="90" cx="125" cy="100" stroke="url(#linearGradient2)" stroke-width="20" fill="transparent" style="clip-path: url(#rect1);")
 						text.circle__text(x="0" y="135" fill="url(#linearGradient2)") ОБО МНЕ 
 		.row.justify-content-center
 			.col-xl-5.col-lg-6

@@ -1,10 +1,10 @@
-section.pageProofs
+section.pageProofs#pageproofs
 	.container-fluid
 		.row
 			.col
 				.title
 					svg.circle(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 550 200', style='enable-background:new 0 0 550 200;', xml:space='preserve')
-						circle(r="90" cx="275" cy="100" stroke="#9e009e" stroke-width="20" fill="transparent" style="clip-path: url(#rect1);")
+						circle(r="90" cx="275" cy="100" stroke="url(#linearGradient3)" stroke-width="20" fill="transparent" style="clip-path: url(#rect1);")
 						text.circle__text(x="0" y="135" fill="url(#linearGradient3)") ПРОЦЕСС ВЕРСТКИ 
 	.container-fluid
 		.row.justify-content-center
@@ -19,21 +19,20 @@ section.pageProofs
 								i.fa.fa-scissors(aria-hidden="true")
 							.pageProofs__content-name
 								p Работа с макетом
-
 					.col-lg-2.col-md-4.col-sm-6
-						.pageProofs__content
+						.pageProofs__content.firstarrow
 							.pageProofs__content-img
 								i.fa.fa-html5(aria-hidden="true")
 							.pageProofs__content-name
 								p Верстка контента		
 					.col-lg-2.col-md-4.col-sm-6
-						.pageProofs__content
+						.pageProofs__content.middlearrow
 							.pageProofs__content-img
 								i.fa.fa-css3(aria-hidden="true")
 							.pageProofs__content-name
 								p Стилизация сайта
 					.col-lg-2.col-md-4.col-sm-6
-						.pageProofs__content
+						.pageProofs__content.prelastarrow
 							.pageProofs__content-img
 								i.fa.fa-mobile(aria-hidden="true")
 							.pageProofs__content-name

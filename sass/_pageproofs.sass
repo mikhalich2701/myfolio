@@ -1,12 +1,26 @@
 .pageProofs
 	position: relative
-	padding: 50px
 	background: linear-gradient(to top, #4DC611 0%, #61C85F 50%, #7EC7A9 100%)
 	.title
 		width: 440px
 	.tag
 		color: #9e009e
 	.lastarrow::after
+			display: none
+	+r(992)
+		.middlearrow::after
+			display: none
+	+r(768)
+		.middlearrow::after
+			display: block
+	+r(576)
+		.middlearrow::after
+			display: none
+	+r(768)
+		.firstarrow::after
+			display: none
+	+r(768)
+		.prelastarrow::after
 			display: none	
 	&__content
 		position: relative
@@ -19,14 +33,16 @@
 		transition: transform 1s
 		&:after
 			+pseudo
-			width: 5vw
-			height: 5vw
-			top: 20%
-			right: -3.5vw 			
+			width: 60px
+			height: 60px
+			top: 50px
+			right: calc(-1vw - 35px)			
 			background: url('../img/arrow.svg') center center no-repeat
 			background-size: cover
 			animation: arrowmove .5s linear infinite alternate	
 			z-index: 10	
+			&:after
+				display: none
 		&-img 
 			position: relative
 			width: 140px
