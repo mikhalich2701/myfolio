@@ -1,24 +1,26 @@
 .header
 	position: relative
 	height: 100vh
-	background: #BBB
 	&__up
 		position: fixed
 		display: flex
 		justify-content: space-between
 		align-items: center
-		padding: 20px 40px
+		padding: 10px 20px
 		width: 100%
 		left: 0
 		top: 0
 		z-index: 450
 	&__logo
 		width: 300px
-		padding-top: 25px
+		padding-top: 15px
+		+r(992)
+			width: 200px
 	&__button
 		position: relative
 		width: 40px
 		height: 35px
+		margin-top: -10px
 		cursor: pointer
 		transition: transform .3s
 		z-index: 550

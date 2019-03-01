@@ -9,12 +9,10 @@ $(document).ready(function(){
     // Плавный скролл к метке
 
     $('a[href^="#"]').click(function () {
-        setTimeout(function(){
-            elementClick = $(this).attr("href");
-            destination = $(elementClick).offset().top;
-            $('html').animate( { scrollTop: destination }, 1100 );
-            return false;
-         },700);                 
+        elementClick = $(this).attr("href");
+        destination = $(elementClick).offset().top;
+        $('html').delay(700).animate( { scrollTop: destination }, 1100 );
+        return false;                
     });
 
     var windowHeight = $(window).height(); 

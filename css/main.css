@@ -343,7 +343,6 @@ a:hover {
 .header {
   position: relative;
   height: 100vh;
-  background: #BBB;
 }
 
 .header__up {
@@ -360,7 +359,7 @@ a:hover {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 20px 40px;
+  padding: 10px 20px;
   width: 100%;
   left: 0;
   top: 0;
@@ -369,13 +368,14 @@ a:hover {
 
 .header__logo {
   width: 300px;
-  padding-top: 25px;
+  padding-top: 15px;
 }
 
 .header__button {
   position: relative;
   width: 40px;
   height: 35px;
+  margin-top: -10px;
   cursor: pointer;
   -webkit-transition: -webkit-transform .3s;
   transition: -webkit-transform .3s;
@@ -871,10 +871,6 @@ a:hover {
   -webkit-animation: arrowmove .5s linear infinite alternate;
   animation: arrowmove .5s linear infinite alternate;
   z-index: 10;
-}
-
-.pageProofs__content:after:after {
-  display: none;
 }
 
 .pageProofs__content-img {
@@ -1711,6 +1707,10 @@ a:hover {
     font-size: 2.5rem;
   }
 
+  .header__logo {
+    width: 200px;
+  }
+
   .pageProofs .middlearrow::after {
     display: none;
   }
@@ -1779,6 +1779,10 @@ a:hover {
   }
 
   .pageProofs .middlearrow::after {
+    display: none;
+  }
+
+  .pageProofs__content:after {
     display: none;
   }
 
